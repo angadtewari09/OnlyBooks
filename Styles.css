@@ -4,7 +4,6 @@
     --dark :rgba(167,152,200,800);
     --black:#444;
     --light-color:#666;
-    --border:.1rem solid rgba(0,0,0,.1);
     --border-hover:.1rem solid var(--black);
     --box-shadow:0 .5rem 1rem rgba(0,0,0,.1);
 }
@@ -189,4 +188,15 @@ section{
     z-index: 1000;
 
 }
-
+.button {
+    margin-top:1.2rem;
+    display: inline-block;
+    font-weight: bold;
+    font-size: 1.9rem;
+    cursor:pointer;
+    background: var(--navbar);
+    color:white;
+    padding: 1rem 2rem;
+    height: 4.6rem;
+    border-radius: 5px;
+}
