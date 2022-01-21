@@ -9,22 +9,7 @@
   <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
-<script type="text/javascript">
-    function zoom() {
-       
-// let i = 0;
-// while (i < 1000000) {
-//   task(i);
-//    i++;
-// }
-// function task(i) {
-//   setTimeout(function() {
-//       // Add tasks to do
-//   }, 2000 * i);
-// }
-        document.body.style.zoom = "90%" 
-    }
-</script>
+
 
 <body onload="zoom()">
    <header class="header">
@@ -50,6 +35,23 @@
                <a href="#Contact-us">Contact us</a>
            </nav>
            
+           <div class="login-form-container">
+               <button class="cross"><i class="fa fa-close"></i></button>
+               <form action="">
+                   <h3>Sign in</h3>
+                   <span>Username</span>
+                   <input type="email" name="" placeholder="Enter your email id" id="username" class="username">
+                   <span>Password</span>
+                   <input type="password" name="" placeholder="Enter your password" id="password" class="password">
+                   <div class="checkbox">
+                       <input type="checkbox" name="" id="remember-me">
+                       <label for="remember-me"> Remember me</label>
+                   </div>
+                   <input type="submit" value="sign in" class="btn sign-in">
+                   <p><a href="#">Forgot password?</a></p>
+                   <p><a href="#">Sign up!</a></p>
+               </form>
+           </div>
        </div>
    </header>
 <section class="home" id="home">
@@ -60,7 +62,7 @@
             <span href="#" class="button">Shop Now</span>
         </div>
         <div class="book-cover">
-            
+            <img src="student.png">
         </div>
     </div>
 </section>
@@ -139,4 +141,23 @@
     </div>
 </footer>
 </body>
+<script type="text/javascript">
+
+    let loginForm = document.querySelector(".login-form-container");
+    
+    document.getElementById("login-btn").addEventListener('click' , () => {
+        loginForm.classList.toggle('active');
+        console.log("hello");
+        document.body.style.overflow = 'hidden';
+  
+        // if any scroll is attempted, set this to the previous value
+    });
+    document.querySelector(".cross").addEventListener('click', () => {
+        loginForm.classList.remove('active');
+        document.body.style.overflow = 'auto';
+    });
+    function zoom() {
+        document.body.style.zoom = "90%" 
+    }
+</script>
 </html>
