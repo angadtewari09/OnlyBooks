@@ -228,13 +228,11 @@ section{
     
     flex:1 1 42rem;
     margin-top: 3rem;
-    border: black dashed 2px;
 }
 .home .row .book-cover{
     flex:1 1 42rem;
     text-align: center;
     margin-top: 2rem;
-    border: black dashed 2px;
 }
 .home .row .content h2{
     color:var(--black);
@@ -381,8 +379,32 @@ section{
     height: 12rem;
     border:solid 1px #bfbfbf;
     box-shadow: 10px 10px 5px #f0e5e5;
-    
-
+}
+.social-media-buttons {
+    text-align: center;
+}
+.social-media {
+    display: flex;
+    justify-content: center;
+}
+.social-icon {
+    height: 65px;
+    width: 65px;
+    border: 1px solid #333;
+    margin: 0 0.45rem;
+    margin-top: 1.2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    color: #333;
+    font-size: 1.85rem;
+    border-radius: 50%;
+}
+.other-options {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
 }
 .card {
     backdrop-filter: blur(12px) saturate(112%);
@@ -499,4 +521,67 @@ ul{
   .footer-col{
     width: 100%;
 }
+}
+/* media queries  */
+
+@media (max-width:991px){
+    html{
+        font-size: 55%;
+    }
+    .header .header-1{
+        padding:2rem;
+    }
+    section{
+        padding:3rem 2rem;
+    }
+}
+
+@media (max-width:768px){
+    html{
+        scroll-padding-top: 0;
+    }
+    body{
+        padding-bottom: 6rem;
+    }
+    .header .header-2{
+        display:none;
+    }
+    .bottom-navbar{
+        display: block;
+    }
+    #search-btn{
+        display: inline-block;
+    }
+    .header .header-1{
+        box-shadow: var(--box-shadow);
+        position: relative;
+    }
+    .header .header-1 .search-form{
+        position:absolute;
+        top:-115%; right:2rem;
+        width: 90%;
+        box-shadow: var(--box-shadow);
+    }
+    .header .header-1 .search-form.active{
+        top:115%;
+    }
+    .home .row .content{
+        text-align: center;
+    }
+    .home .row .content h3{
+        font-size: 3.5rem;
+    }
+    .newsletter{
+        background-position: right;
+    }
+    .newsletter form{
+        margin-left:0;
+        max-width: 100%;
+    }
+}
+
+@media (max-width:450px){
+    html{
+        font-size: 50%;
+    }
 }
