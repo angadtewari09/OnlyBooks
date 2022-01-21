@@ -489,22 +489,20 @@ ul{
 
 }
 .footer-col .social-links a{
-	display: inline-block;
-	height: 3.4rem;
+	display: inline-flex;
+    align-items: center;
+    flex-direction: row;
 	width: 3.4rem;
     padding: 12px;
 	background-color: rgba(255,255,255,0.2);
 	margin:0 10px 10px 0;
-	text-align: center;
 	line-height: 40px;
 	border-radius: 50%;
 	color: #ffffff;
 	transition: all 0.5s ease;
     font-size: 1.8rem;
 }
-.footer-col .social-links li{
-    font-size: 400px;
-}
+
 .footer-col .social-links a:hover{
 	color: #24262b;
 	background-color: #ffffff;
